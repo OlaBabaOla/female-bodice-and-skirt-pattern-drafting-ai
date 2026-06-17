@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailorDraft - Pattern Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>TailorDraft</h1>
+        <p>Automatic Pattern Dimension Generator</p>
+    </header>
+
+    <main class="app-container">
+        <!-- Input Section -->
+        <section class="input-panel">
+            <h2>Body Measurements (Inches)</h2>
+            <form id="measurementForm">
+                <div class="input-group">
+                    <label for="bust">Full Bust</label>
+                    <input type="number" id="bust" placeholder="e.g. 36" required>
+                </div>
+                <div class="input-group">
+                    <label for="waist">Waist</label>
+                    <input type="number" id="waist" placeholder="e.g. 28" required>
+                </div>
+                <div class="input-group">
+                    <label for="hips">Hips</label>
+                    <input type="number" id="hips" placeholder="e.g. 38" required>
+                </div>
+                <div class="input-group">
+                    <label for="shoulder">Shoulder Width</label>
+                    <input type="number" id="shoulder" placeholder="e.g. 15" required>
+                </div>
+                <div class="input-group">
+                    <label for="neck">Neck Girth</label>
+                    <input type="number" id="neck" placeholder="e.g. 14" required>
+                </div>
+                <div class="input-group">
+                    <label for="backLength">Back Length (Nape to Waist)</label>
+                    <input type="number" id="backLength" placeholder="e.g. 16" required>
+                </div>
+                <button type="button" id="generateBtn">Generate Pattern</button>
+            </form>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-panel" id="results">
+            <div class="placeholder-text">Enter measurements to see draft dimensions.</div>
+            
+            <div id="patternOutputs" style="display:none;">
+                <div class="result-card">
+                    <h3>Bodice Draft (Front)</h3>
+                    <ul id="frontBodiceList"></ul>
+                </div>
+                <div class="result-card">
+                    <h3>Bodice Draft (Back)</h3>
+                    <ul id="backBodiceList"></ul>
+                </div>
+                <div class="result-card">
+                    <h3>Basic Skirt Draft</h3>
+                    <ul id="skirtList"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
